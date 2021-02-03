@@ -13,6 +13,14 @@
 \usepackage[charter]{mathdesign} % Bitstream Charter
 % \usepackage{newpxtext,newpxmath} % Palatino
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -91,7 +99,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Hanoi University of Science and Technology}{Hanoi, Vietnam}
-      {Bachelor of Information and Communication Technology;  GPA: 3.00/4.0}{Septenber 2013 - Expected July 2019}{
+      {Bachelor of Information and Communication Technology;  GPA: 3.02/4.0}{Septenber 2013 - August 2019}{
       \resumeItemNoBullet{Thesis}{Construction of a system collecting and monitoring logs, metrics, and traces information of distributed applications}
     }
   \resumeSubHeadingListEnd
@@ -101,13 +109,13 @@
   \resumeSubHeadingListStart
   \small
     \item{
-     \textbf{Languages}{: Python, C, SQL, Java, PHP, JavaScript}
+     \textbf{Languages}{: Golang, Python }
      \hfill
-     \textbf{Technologies}{: Ubuntu, GitLab, Docker, OpenStack, Redis, Jaeger}
+     \textbf{Technologies}{: Ubuntu, GitLab, Docker, OpenStack}
     }
     \vspace{-5pt}
     \item{
-     \textbf{Frameworks}{: Spring, Flask, CodeIgniter, Yii 2, jQuery}
+     \textbf{Frameworks}{: Django, Sanic}
     }
 \resumeSubHeadingListEnd
 
@@ -117,15 +125,28 @@
 
     \resumeSubheading
       {Viettel Networks}{Hanoi, Vietnam}
-      {Cloud Engineer Intern}{November 2018 - Present}
+      {Cloud Engineer}{November 2018 - Present}
       \resumeItemListStart
-        \resumeItem{VSmart}
+        \resumeItem{Observability and Monitoring}
           {
             \begin{itemize}
-                \item Correlating traces and logs by aggregate identifications of traces to logs
-                \item Correlating traces and metrics by attaching application instant metrics to traces 
-                \item Installing and analyzing Elastic APM to VSmart staging environment
-                \item Installing and analyzing Amazon OpenDistro to VSmart staging environment
+                \item Implementing and maintaining logging, monitoring and tracing systems
+                \item Making sure logging, monitoring and tracing data are visualized
+                \item Contributing to upstream projects and maintaining downstreams
+            \end{itemize}
+          }
+        \resumeItem{Automation}
+          {
+            \begin{itemize}
+                \item Implementing and maintaining \href{https://github.com/vCloud-DFTBA/faythe}{Faythe}, an open-sourced project connecting Prometheus and OpenStack
+                \item Implementing GitHub workflows
+                \item Implementing CI/CD with Jenkins and GitLab
+            \end{itemize}
+          }
+        \resumeItem{Multi-Cloud Management Platform}
+          {
+            \begin{itemize}
+                \item Designing and implemeting a Multi-Cloud Management Platform that controls multiple OpenStack clusters
             \end{itemize}
           }
       \resumeItemListEnd
@@ -136,19 +157,9 @@
       \resumeItemListStart
         \resumeItem{Cloud-based Dynamic Streaming and Loading of 3D Scene}
           {An approach for out-of-core dynamic streaming of a virtual scene
-          	\begin{itemize}
-          		\item Implementing a python script to breakdown huge XML files consisting of several 3D objects into individual files of one object 
-          		\item Implementing a python script to automatically compare local storage and cloud storage and synchronize them by uploading missing files 
-          		\item Loading, converting and real-time streaming 3D objects to Unity scene
-          	\end{itemize}
           }
       \resumeItem{Efficient scheduling for dynamic streaming of 3D scene for mobile devices}
       {An efficient resource scheduling scheme for out-of-core dynamic streaming of a 3D scene
-      	\begin{itemize}
-      		\item Implementing a python script to construct a 2D map based on a 3D dataset
-      		\item Implementing a python script to find a shortest path between two selected source and destination using Djikstra's algorithm
-      		\item Prioritizing objects based on theirs size and using them to define a scheduling streaming scheme with RabbitMQ for the best mobile devices experience
-      	\end{itemize}
       }
       \resumeItemListEnd
 
@@ -169,31 +180,6 @@
 
   \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------------
-%\shorterSection{Projects}
-%  \resumeSubHeadingListStart
-%    \resumeSubItem{OCR using Conditional Random Fields}
-%     {A probabilistic graphical model for sequential character recognition
-%        \vspace{-5pt}
-%        \begin{itemize}
-%            \item Implemented a CRF in $O(m|\mathcal{Y}|^2)$ time to achieve a 84\% letter-wise accuracy on UPenn OCR dataset
-%            \item Implemented OpenMPI CRF using PETSc and Tao to achieve 77.1\% letter-wise accuracy
-%        \end{itemize}
-%     }
-%    \resumeSubItem{ARYouThereYet}{An augmented reality application developed on ARKit with dynamic AR nodes}
-%    \resumeSubItem{Aspect-based Sentiment Analysis}
-%      {Implemented Deep Memory Networks to achieve 78.66\% accuracy, 0.69 F1-score on SemEval 2014 dataset}
-%    \resumeSubItem{Iris Speech to Code}
-%      {A natural speech to code converter for aiding programmers with disabilities
-%        \vspace{-5pt}
-%        \begin{itemize}
-%            \item Trained an intent classification model in Microsoft Luis to classify 15+ classes or commands
-%            \item Implemented a message passing protocol using RabbitMQ to broker messages between Google API, ElectronJS, and VS Code
-%        \end{itemize}
-%      }
-%    \resumeSubItem{AI Lifeguard}{Trained a 3D-CNN model on Microsoft Azure for action localization on drowning people in swimming pools. Achieved mean IOU score of 0.45}
-%  \resumeSubHeadingListEnd
-
 %-----------Addtional Experience & Achievements-----------------
 \shorterSection{Additional Experience \& Achievements}
   \resumeSubHeadingListStart
@@ -202,7 +188,11 @@
     \vspace{-5pt}
     \item{Coauthor of \textit{“Cloud-Based Dynamic Streaming and Loading of 3D Scene”} in \textit{The 2018 International Conference on Cyberworlds (CW)}, Singapore, DOI: 10.1109/CW.2018.00079}
     \vspace{-5pt}
-    \item{Coauthor of the \textbf{IWAIT best paper award} \textit{Efficient scheduling for dynamic streaming of 3D scene for mobile devices} in \textit{2019 Joint International Workshop on Advanced Image Technology (IWAIT) and International Forum on Medical Imaging in Asia (IFMIA)}, Singapore, DOI: 10.1117/12.2521357}
+    \item{Coauthor of the \textbf{IWAIT best paper award} \textit{"Efficient scheduling for dynamic streaming of 3D scene for mobile devices"} in \textit{2019 Joint International Workshop on Advanced Image Technology (IWAIT) and International Forum on Medical Imaging in Asia (IFMIA)}, Singapore, DOI: 10.1117/12.2521357}
+    \vspace{-5pt}
+    \item{\href{https://www.openstack.org/community/speakers/profile/15593/dat-vutuan}{Speaker} at \textbf{Virtual Open Infrastructure Summit 2020} \href{https://www.openstack.org/videos/summits/virtual/Auto-scaling-in-Openstack-without-Telemetry}{\textit{Auto-scaling in Openstack without Telemetry}}}
+    \vspace{-5pt}
+    \item{Coauthor of \href{https://superuser.openstack.org/articles/auto-scaling-in-viettel-networks-without-openstack-telemetry/}{\textit{"Auto-scaling in Viettel Networks Without OpenStack Telemetry"}}}
     \vspace{-5pt}
     \item{ETS certificate of scoring 910/990 in \textit{TOEIC Listening and Reading Test}}
   \resumeSubHeadingListEnd
